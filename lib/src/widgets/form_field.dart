@@ -61,6 +61,7 @@ class DateTimeFormField extends FormField<DateTime> {
                     clearIconData,
                     size: 15,
                   ),
+                  padding: EdgeInsets.zero,
                   onPressed: () => field.didChange(null),
                 ),
               );
