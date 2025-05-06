@@ -52,12 +52,15 @@ class DateTimeFormField extends FormField<DateTime> {
 
             InputDecoration decorationArg =
                 (decoration ?? const InputDecoration())
-                    .copyWith(errorText: field.errorText);
+                    .copyWith(errorText: field.errorText, errorMaxLines: 2);
 
             if (canClear && !isEmpty) {
               decorationArg = decorationArg.copyWith(
                 suffixIcon: IconButton(
-                  icon: Icon(clearIconData),
+                  icon: Icon(
+                    clearIconData,
+                    size: 15,
+                  ),
                   onPressed: () => field.didChange(null),
                 ),
               );
